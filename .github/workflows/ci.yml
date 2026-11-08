@@ -1,0 +1,47 @@
+name: Test and build Atlas
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Restore pinned game data if absent
+        run: |
+          if [ ! -f public/data/graph.json ]; then
+            git clone --filter=blob:none https://github.com/Morta1/IdleonToolbox.git /tmp/idleon-toolbox
+            git -C /tmp/idleon-toolbox checkout 2dd523b8f3e41a586e7b56713f065f3bce97358d
+            python3 scripts/import-data.py /tmp/idleon-toolbox
+          fi
+      - name: Persist initial data snapshot
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git add public/assets public/data LICENSE
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Import pinned Idleon data and attributed game graphics'
+            git push
+          fi
+      - run: npm test
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-screenshots
+          path: test-results/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: idleon-atlas-web-app
+          path: dist/

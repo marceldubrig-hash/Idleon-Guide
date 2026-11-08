@@ -1,0 +1,392 @@
+{
+  "guides": [
+    {
+      "id": "world-1",
+      "world": 1,
+      "title": "Welt 1: Dein Fundament",
+      "subtitle": "Mining · Chopping · Smithing",
+      "intro": "Lege einen Kampf- und einen Sammel-Schwerpunkt fest. Ein neues Item ist nur dann ein Fortschritt, wenn du es auch sinnvoll einsetzen kannst.",
+      "steps": [
+        "Prüfe vor einer neuen Karte Trefferchance und Überleben in der AFK-Info.",
+        "Richte die Produktion am Anvil ein und behalte die Kapazität im Blick.",
+        "Vergleiche fehlende Materialien über die Rezept-Verknüpfungen in der Datenbank.",
+        "Arbeite dich zu Amarok vor und pflege parallel deine accountweiten Systeme."
+      ],
+      "icon": "/data/UImap1.png",
+      "type": "Orientierung",
+      "sources": [
+        "toolbox",
+        "reddit"
+      ],
+      "status": "Redaktionelle Orientierung; keine getestete Speedrun-Route",
+      "boss": "Amarok"
+    },
+    {
+      "id": "world-2",
+      "world": 2,
+      "title": "Welt 2: Accountweite Stärke",
+      "subtitle": "Alchemy · Fishing · Catching",
+      "intro": "Mit Alchemy wächst nicht nur ein Charakter. Vergleiche Bubble-Effekte und ihre Materialkosten, bevor du deinen gesamten Vorrat ausgibst.",
+      "steps": [
+        "Starte Alchemy und prüfe neue Bubbles und Vials.",
+        "Nutze Fishing und Catching gezielt für tatsächlich benötigte Materialien.",
+        "Prüfe Post Office und Obols als zusätzliche Verbesserungen.",
+        "Bereite den nächsten Weltboss mit aktueller Ausrüstung und Nahrung vor."
+      ],
+      "icon": "/data/UImap2.png",
+      "type": "Orientierung",
+      "sources": [
+        "toolbox",
+        "reddit"
+      ],
+      "status": "Redaktionelle Orientierung; keine getestete Speedrun-Route",
+      "boss": "Efaunt"
+    },
+    {
+      "id": "world-3",
+      "world": 3,
+      "title": "Welt 3: Produktion aufbauen",
+      "subtitle": "Construction · Trapping · Worship",
+      "intro": "Mehr Systeme bedeuten mehr Abhängigkeiten. Der Atlas zeigt Zutaten, Fundorte und Verwendungszwecke nebeneinander, damit du Engpässe erkennst.",
+      "steps": [
+        "Richte Construction ein und prüfe verfügbare Gebäude.",
+        "Nimm 3D-Printer-Samples nach relevanten Verbesserungen neu auf.",
+        "Vergleiche Verbrauch und Produktion deiner Refinery, bevor du Ränge erhöhst.",
+        "Pflege Trapping und Worship auf deinen Charakteren."
+      ],
+      "icon": "/data/UImap3.png",
+      "type": "Orientierung",
+      "sources": [
+        "toolbox",
+        "reddit"
+      ],
+      "status": "Redaktionelle Orientierung; keine getestete Speedrun-Route",
+      "boss": "Chizoar"
+    },
+    {
+      "id": "world-4",
+      "world": 4,
+      "title": "Welt 4: Boni verbinden",
+      "subtitle": "Cooking · Breeding · Laboratory",
+      "intro": "Breeding, Gewürze und Cooking hängen zusammen. Verfolge diese Kette über die Detailseiten und plane Labor-Belegung bewusst.",
+      "steps": [
+        "Beginne Breeding und suche nach dem nächsten erreichbaren Gewürz.",
+        "Vergleiche Mahlzeiten nach ihrem Nutzen für dein aktuelles Ziel.",
+        "Prüfe aktivierte Laboratory-Verbindungen nach jeder Umstellung.",
+        "Behalte Rift und Tome als weitere Fortschrittsbereiche im Blick."
+      ],
+      "icon": "/data/UImap4.png",
+      "type": "Orientierung",
+      "sources": [
+        "toolbox",
+        "reddit"
+      ],
+      "status": "Redaktionelle Orientierung; keine getestete Speedrun-Route",
+      "boss": "Troll"
+    },
+    {
+      "id": "world-5",
+      "world": 5,
+      "title": "Welt 5: Langfristig wachsen",
+      "subtitle": "Sailing · Divinity · Gaming",
+      "intro": "Sailing-Artefakte, Götter und Gaming-Boni greifen in viele ältere Systeme ein. Nutze die Datenbank, um Auswirkungen nachzuschlagen.",
+      "steps": [
+        "Starte Sailing und kontrolliere Inseln sowie Artefakte.",
+        "Prüfe Divinity-Stile und Verbindungen, bevor du Charaktere umverteilst.",
+        "Entwickle Gaming und seine Upgrades passend zu deinem Fortschritt.",
+        "Erkunde die verfügbaren Caverns im Hole und ihre Voraussetzungen."
+      ],
+      "icon": "/data/UImap5.png",
+      "type": "Orientierung",
+      "sources": [
+        "toolbox",
+        "reddit"
+      ],
+      "status": "Redaktionelle Orientierung; keine getestete Speedrun-Route",
+      "boss": "Kattlekruk"
+    },
+    {
+      "id": "world-6",
+      "world": 6,
+      "title": "Welt 6: Drei neue Baustellen",
+      "subtitle": "Farming · Sneaking · Summoning",
+      "intro": "Farming, Sneaking und Summoning erweitern deinen Account. Arbeite an erreichbaren Verbesserungen, statt Ressourcen allein auf teure Einzelupgrades zu konzentrieren.",
+      "steps": [
+        "Schalte die neuen Systeme frei und starte ihre Produktion.",
+        "Vergleiche Farming-Markt, Exotic Market und Land Ranks.",
+        "Prüfe Ausrüstung und Chancen beim Sneaking.",
+        "Verknüpfe Summoning-Kämpfe mit ihren Belohnungen und Upgrades."
+      ],
+      "icon": "/data/UImap6.png",
+      "type": "Orientierung",
+      "sources": [
+        "toolbox",
+        "reddit"
+      ],
+      "status": "Redaktionelle Orientierung; keine getestete Speedrun-Route",
+      "boss": "Emperor"
+    },
+    {
+      "id": "world-7",
+      "world": 7,
+      "title": "Welt 7: Das tiefe Endgame",
+      "subtitle": "Research · Spelunking · weitere Systeme",
+      "intro": "Der importierte Datenstand enthält unter anderem Research, Spelunking, Minehead, Sushi Station, Jelly Operator und Menagerie. Die Detailwerte sind ein Community-Snapshot.",
+      "steps": [
+        "Prüfe Research-Squares und Observations im Katalog.",
+        "Vergleiche Spelunking-Tunnel und Shop-Upgrades.",
+        "Schlage Legend Talents, Zenith und Clam Work nach.",
+        "Kontrolliere neue Inhalte zusätzlich anhand aktueller Spiel- und Patchangaben."
+      ],
+      "icon": "/data/UImap7.png",
+      "type": "Orientierung",
+      "sources": [
+        "toolbox",
+        "reddit"
+      ],
+      "status": "Redaktionelle Orientierung; keine getestete Speedrun-Route",
+      "boss": null
+    },
+    {
+      "id": "alchemy",
+      "world": 2,
+      "title": "Alchemy ohne Blindflug",
+      "subtitle": "Bubbles, Vials und Sigils",
+      "intro": "Eine praktische Arbeitsfolge mit den verknüpften Daten dieses Atlas. Die Empfehlungen ersetzen keine individuelle Accountanalyse.",
+      "steps": [
+        "Suche den gewünschten Bonus in der Enzyklopädie und öffne die passende Bubble.",
+        "Vergleiche Material- und Flüssigkeitskosten. Die angezeigten Formeln sind Basisdaten; Account-Rabatte sind nicht eingerechnet.",
+        "Unterscheide einen neuen Bonus von einem höheren Level eines bestehenden Bonus.",
+        "Speichere dein nächstes Upgrade in der Merkliste."
+      ],
+      "icon": "/data/aUpgradesO0.png",
+      "type": "Praxisguide",
+      "sources": [
+        "toolbox"
+      ],
+      "status": "Redaktionelle Arbeitsfolge; Werte stammen aus dem importierten Snapshot"
+    },
+    {
+      "id": "crafting",
+      "world": 1,
+      "title": "Vom Wunschitem zum Rezept",
+      "subtitle": "Materialien und Herkunft verknüpfen",
+      "intro": "Eine praktische Arbeitsfolge mit den verknüpften Daten dieses Atlas. Die Empfehlungen ersetzen keine individuelle Accountanalyse.",
+      "steps": [
+        "Öffne ein Item und schaue unter „Hergestellt aus“ nach.",
+        "Wechsle zur Zutat, um ihre Dropquellen oder weitere Rezepte zu sehen.",
+        "Nutze die Rezeptmenge für mehrere Exemplare.",
+        "Der Rechner zeigt Basisrezepte; individuelle Rabatte und vorhandene Lagerbestände werden nicht verrechnet."
+      ],
+      "icon": "/data/Copper.png",
+      "type": "Praxisguide",
+      "sources": [
+        "toolbox"
+      ],
+      "status": "Redaktionelle Arbeitsfolge; Werte stammen aus dem importierten Snapshot"
+    },
+    {
+      "id": "drops",
+      "world": 1,
+      "title": "Wo droppt mein Item?",
+      "subtitle": "Monster, Karten und Belohnungen",
+      "intro": "Eine praktische Arbeitsfolge mit den verknüpften Daten dieses Atlas. Die Empfehlungen ersetzen keine individuelle Accountanalyse.",
+      "steps": [
+        "Suche nach dem englischen Ingame-Namen des Items.",
+        "Öffne „Wird fallen gelassen von“ und wechsle zum Monster.",
+        "Prüfe dessen Kartenverknüpfungen sowie die Basis-Dropchance.",
+        "Die Dropchance ist kein persönlicher Loot-Versprecher: individuelle Boni, Sonderregeln und Drop-Tabellen können die tatsächliche Chance verändern."
+      ],
+      "icon": "/monsters/mushG/static.png",
+      "type": "Praxisguide",
+      "sources": [
+        "toolbox"
+      ],
+      "status": "Redaktionelle Arbeitsfolge; Werte stammen aus dem importierten Snapshot"
+    },
+    {
+      "id": "classes",
+      "world": 1,
+      "title": "Deinen Klassenweg verstehen",
+      "subtitle": "Talente und Klassenwechsel",
+      "intro": "Eine praktische Arbeitsfolge mit den verknüpften Daten dieses Atlas. Die Empfehlungen ersetzen keine individuelle Accountanalyse.",
+      "steps": [
+        "Öffne die Kategorie Klassen.",
+        "Folge den Verknüpfungen für Klassenwechsel und Talente.",
+        "Vergleiche Talentbeschreibungen für Kampf und Sammeln getrennt.",
+        "Feste Skillpunkt-Verteilungen hängen von deinem Level, Ziel und Account ab; der Atlas erfindet dafür keinen universellen Build."
+      ],
+      "icon": "/data/ClassIcons1.png",
+      "type": "Praxisguide",
+      "sources": [
+        "toolbox"
+      ],
+      "status": "Redaktionelle Arbeitsfolge; Werte stammen aus dem importierten Snapshot"
+    },
+    {
+      "id": "construction",
+      "world": 3,
+      "title": "Construction & Refinery planen",
+      "subtitle": "Gebäude, Materialien und Produktion",
+      "intro": "Eine praktische Arbeitsfolge mit den verknüpften Daten dieses Atlas. Die Empfehlungen ersetzen keine individuelle Accountanalyse.",
+      "steps": [
+        "Sieh dir alle Gebäude in der Enzyklopädie an.",
+        "Prüfe die Materialien für dein nächstes Ziel.",
+        "Vergleiche Refinery-Ressourcen mit deiner verfügbaren Produktion.",
+        "Plane eine Produktionsreserve, bevor du dauerhaft mehr Material verbrauchst."
+      ],
+      "icon": "/data/UImap3.png",
+      "type": "Praxisguide",
+      "sources": [
+        "toolbox"
+      ],
+      "status": "Redaktionelle Arbeitsfolge; Werte stammen aus dem importierten Snapshot"
+    },
+    {
+      "id": "cooking",
+      "world": 4,
+      "title": "Cooking & Breeding verbinden",
+      "subtitle": "Von Gewürzen zu Mahlzeiten",
+      "intro": "Eine praktische Arbeitsfolge mit den verknüpften Daten dieses Atlas. Die Empfehlungen ersetzen keine individuelle Accountanalyse.",
+      "steps": [
+        "Vergleiche die Boni der Mahlzeiten.",
+        "Öffne verknüpfte Gewürze und ihre Herkunft.",
+        "Prüfe Breeding-Gene und Upgrades getrennt von Mahlzeit-Leveln.",
+        "Konzentriere deine nächsten Schritte auf einen konkret benötigten Accountbonus."
+      ],
+      "icon": "/data/UImap4.png",
+      "type": "Praxisguide",
+      "sources": [
+        "toolbox"
+      ],
+      "status": "Redaktionelle Arbeitsfolge; Werte stammen aus dem importierten Snapshot"
+    },
+    {
+      "id": "sailing",
+      "world": 5,
+      "title": "Artefakte gezielt nachschlagen",
+      "subtitle": "Inseln und langfristige Boni",
+      "intro": "Eine praktische Arbeitsfolge mit den verknüpften Daten dieses Atlas. Die Empfehlungen ersetzen keine individuelle Accountanalyse.",
+      "steps": [
+        "Filtere die Datenbank auf Artefakte.",
+        "Lies den Effekt und die verknüpften Inseln.",
+        "Unterscheide Basisdaten von accountabhängigen Chancen.",
+        "Markiere interessante Artefakte für deinen nächsten Spielbesuch."
+      ],
+      "icon": "/data/UImap5.png",
+      "type": "Praxisguide",
+      "sources": [
+        "toolbox"
+      ],
+      "status": "Redaktionelle Arbeitsfolge; Werte stammen aus dem importierten Snapshot"
+    },
+    {
+      "id": "endgame",
+      "world": 7,
+      "title": "Neue Systeme im Blick behalten",
+      "subtitle": "Welt 7 & Masterklassen",
+      "intro": "Eine praktische Arbeitsfolge mit den verknüpften Daten dieses Atlas. Die Empfehlungen ersetzen keine individuelle Accountanalyse.",
+      "steps": [
+        "Öffne die Welt-7-Übersicht und filtere nach einem System.",
+        "Prüfe Royal Armory, Grimoire, Compass und Tesseract über die Kategorien.",
+        "Lies bei numerischen Effekten auch die Rohformeln.",
+        "Vergleiche den importierten Commit-Stand mit aktuellen Patchnotes."
+      ],
+      "icon": "/data/UImap7.png",
+      "type": "Praxisguide",
+      "sources": [
+        "toolbox"
+      ],
+      "status": "Redaktionelle Arbeitsfolge; Werte stammen aus dem importierten Snapshot"
+    },
+    {
+      "id": "routine",
+      "world": 1,
+      "title": "Eine Routine, die zu dir passt",
+      "subtitle": "Ziele statt endloser Aufgaben",
+      "intro": "Eine praktische Arbeitsfolge mit den verknüpften Daten dieses Atlas. Die Empfehlungen ersetzen keine individuelle Accountanalyse.",
+      "steps": [
+        "Wähle deine aktuelle Welt unter „Mein Abenteuer“.",
+        "Hake nur Aufgaben ab, die für deinen Account bereits zugänglich sind.",
+        "Speichere konkrete Items und Upgrades in der Merkliste.",
+        "Exportiere deinen Fortschritt gelegentlich als Backup. Checklisten werden absichtlich nicht automatisch zurückgesetzt."
+      ],
+      "icon": "/data/UImap1.png",
+      "type": "Praxisguide",
+      "sources": [
+        "toolbox"
+      ],
+      "status": "Redaktionelle Arbeitsfolge; Werte stammen aus dem importierten Snapshot"
+    }
+  ],
+  "sources": [
+    {
+      "id": "toolbox",
+      "title": "Idleon Toolbox · offener Datenbestand",
+      "url": "https://github.com/Morta1/IdleonToolbox",
+      "state": "Importiert: Spieltabellen, Entitäten und Verknüpfungen; GPL-3.0-only. Snapshot vom 08.11.2026."
+    },
+    {
+      "id": "wiki",
+      "title": "IdleOn MMO Wiki",
+      "url": "https://idleon.wiki/wiki/Main_Page",
+      "state": "Abruf blockiert (403 / robots.txt). Kein erfolgreicher Vollabgleich. Direkte Nachschlagelinks vorhanden."
+    },
+    {
+      "id": "reddit",
+      "title": "r/idleon · Mega Guide of Guides",
+      "url": "https://www.reddit.com/r/idleon/comments/1m3pu0r/mega_guide_of_guides/",
+      "state": "Öffentliche Ressourcenübersicht gelesen; Community-Empfehlungen sind keine verifizierten Spielregeln."
+    },
+    {
+      "id": "griffy",
+      "title": "GriffyBit · YouTube",
+      "url": "https://www.youtube.com/@GriffyBitMain",
+      "state": "Videoverweise über öffentliche Quellen ermittelt. Kein vollständiger Video- oder Transkript-Abruf; nicht als ausgewertet markiert."
+    },
+    {
+      "id": "discord",
+      "title": "Offizieller IdleOn Discord",
+      "url": "https://discord.gg/idleon",
+      "state": "Community-Einstieg. Keine geschützten Nachrichten gelesen oder importiert."
+    },
+    {
+      "id": "griffydiscord",
+      "title": "GriffyBit · Itty Bitty Army",
+      "url": "https://discord.com/invite/HkzvWj5F4B",
+      "state": "Öffentlicher Einladungslink geprüft. Serverinhalte nicht zugänglich."
+    }
+  ],
+  "videos": [
+    {
+      "title": "GriffyBit · Welt 1 in 5 Minuten",
+      "world": 1,
+      "url": "https://www.youtube.com/watch?v=AocAb5CHyVo",
+      "status": "Verlinkt · Inhalt nicht vollständig geprüft"
+    },
+    {
+      "title": "GriffyBit · Welt 2 in 5 Minuten",
+      "world": 2,
+      "url": "https://www.youtube.com/watch?v=iSC9tnCfe5g",
+      "status": "Verlinkt · Inhalt nicht vollständig geprüft"
+    },
+    {
+      "title": "GriffyBit · Welt 3 in 5 Minuten",
+      "world": 3,
+      "url": "https://www.youtube.com/watch?v=eUKhDa1o1Ig",
+      "status": "Verlinkt · Inhalt nicht vollständig geprüft"
+    },
+    {
+      "title": "GriffyBit · Welt 4 in 5 Minuten",
+      "world": 4,
+      "url": "https://www.youtube.com/watch?v=OCFMMBCcHsw",
+      "status": "Verlinkt · Inhalt nicht vollständig geprüft"
+    },
+    {
+      "title": "GriffyBit · Welt 6 Beginner Guide",
+      "world": 6,
+      "url": "https://www.youtube.com/watch?v=O5XtGRiv6g4",
+      "status": "Verlinkt · Inhalt nicht vollständig geprüft"
+    }
+  ]
+}
