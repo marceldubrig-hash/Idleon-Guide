@@ -67,3 +67,9 @@ Der Import ist bewusst manuell, damit Updates geprüft werden können. Bei einem
 ## Rechte
 
 Eigener App-Code und übernommener Toolbox-Datenbestand: GPL-3.0-only, siehe [LICENSE](LICENSE). Attribution und Unterschiede: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). IdleOn-Spielgrafiken und Marken bleiben Eigentum ihrer Rechteinhaber, insbesondere LavaFlame2. Die GPL für den App-Code ist keine zusätzliche Lizenz für Spielgrafiken. Kein offizielles IdleOn-Produkt.
+
+## Vorschau und Prüfung
+
+![Idleon Atlas auf dem Desktop](docs/screenshots/desktop.png)
+
+[Mobile Ansicht](docs/screenshots/mobile.png) · [Prüfbericht](docs/VALIDATION.md) · [Erfolgreicher Build mit App-Download](https://github.com/marceldubrig-hash/Idleon-Guide/actions/runs/42530900295)
