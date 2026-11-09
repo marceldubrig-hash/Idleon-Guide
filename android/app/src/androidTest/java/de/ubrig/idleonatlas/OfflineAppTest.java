@@ -23,10 +23,17 @@ public class OfflineAppTest {
         while(System.currentTimeMillis()<deadline){if("true".equals(js(scenario,condition)))return;Thread.sleep(150);}
         fail("Condition failed: "+condition+"; document="+js(scenario,"document.body.innerText.slice(-800)"));
     }
+    private void screenshot(String name) throws Exception {
+        android.graphics.Bitmap bitmap=InstrumentationRegistry.getInstrumentation().getUiAutomation().takeScreenshot();
+        java.io.File file=new java.io.File(InstrumentationRegistry.getInstrumentation().getTargetContext().getExternalFilesDir(null),name);
+        try(java.io.FileOutputStream out=new java.io.FileOutputStream(file)){bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,out);}
+        bitmap.recycle();
+    }
     @Test public void offlineStartupSearchAndNativeBridge() throws Exception {
         assertEquals(PackageManager.PERMISSION_DENIED,InstrumentationRegistry.getInstrumentation().getTargetContext().checkSelfPermission("android.permission.INTERNET"));
         try(ActivityScenario<MainActivity> s=ActivityScenario.launch(MainActivity.class)){
             waitFor(s,"document.querySelector('main h1')?.textContent.includes('Dein nächster Schritt')===true");
+            screenshot("android-home.png");
             assertEquals("true",js(s,"typeof window.nativeBackup?.postMessage==='function'"));
             js(s,"location.hash='database?q=Copper%20Ore'");
             waitFor(s,"!!document.querySelector('.entity[href=\"#entry/item%3ACopper\"]')");
@@ -50,6 +57,7 @@ public class OfflineAppTest {
             js(s,"location.hash='world/7'");
             waitFor(s,"document.querySelector('main h1')?.textContent==='Shimmerfin Deep'");
             waitFor(s,"Array.from(document.querySelectorAll('main img')).filter(i=>i.getBoundingClientRect().top<innerHeight).every(i=>i.complete&&i.naturalWidth>0)");
+            screenshot("android-world7.png");
             js(s,"location.hash='tools'");
             waitFor(s,"!!document.querySelector('#drop-form')");
             js(s,"document.querySelector('#drop-form button').click()");

@@ -33,7 +33,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@v5
         with:
           gradle-version: '8.11.1'
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: ~/.android/debug.keystore
           key: idleon-android-preview-key-v1
@@ -52,7 +52,9 @@ jobs:
           arch: x86_64
           target: google_apis
           disable-animations: true
-          script: gradle -p android connectedDebugAndroidTest --no-daemon
+          script: |
+            gradle -p android connectedDebugAndroidTest --no-daemon
+            adb pull /sdcard/Android/data/de.ubrig.idleonatlas/files android-screenshots
       - name: Collect Android reports
         if: always()
         uses: actions/upload-artifact@v6
@@ -61,6 +63,7 @@ jobs:
           path: |
             android/app/build/reports/
             android/app/build/outputs/androidTest-results/
+            android-screenshots/
       - name: Prepare installable download
         run: |
           cp android/app/build/outputs/apk/release/app-release.apk Idleon-Atlas-Android.apk
