@@ -1,0 +1,80 @@
+name: Android APK
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'android/**'
+      - 'app.js'
+      - 'core.js'
+      - 'styles.css'
+      - 'index.html'
+      - 'public/**'
+      - 'scripts/**'
+      - '.github/workflows/android.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: android-preview
+  cancel-in-progress: false
+jobs:
+  apk:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v5
+        with:
+          gradle-version: '8.11.1'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: idleon-android-preview-key-v1
+      - run: npm ci && npm test && npm run build && node scripts/prepare-android.mjs
+      - name: Compile and lint APK
+        run: gradle -p android assembleRelease lintRelease assembleDebug assembleDebugAndroidTest --no-daemon
+      - name: Enable emulator acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Test on Android 15 emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          disable-animations: true
+          script: gradle -p android connectedDebugAndroidTest --no-daemon
+      - name: Collect Android reports
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: android-test-reports
+          path: |
+            android/app/build/reports/
+            android/app/build/outputs/androidTest-results/
+      - name: Prepare installable download
+        run: |
+          cp android/app/build/outputs/apk/release/app-release.apk Idleon-Atlas-Android.apk
+          sha256sum Idleon-Atlas-Android.apk > Idleon-Atlas-Android.apk.sha256
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose Idleon-Atlas-Android.apk
+      - uses: actions/upload-artifact@v6
+        with:
+          name: Idleon-Atlas-Android-APK
+          path: |
+            Idleon-Atlas-Android.apk
+            Idleon-Atlas-Android.apk.sha256
+      - name: Publish direct APK download
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="android-preview-${GITHUB_RUN_NUMBER}"
+          gh release create "$tag" Idleon-Atlas-Android.apk Idleon-Atlas-Android.apk.sha256 --target "$GITHUB_SHA" --prerelease --title "Idleon Atlas Android · Preview ${GITHUB_RUN_NUMBER}" --notes-file docs/ANDROID_RELEASE.md

@@ -1,8 +1,18 @@
 # Idleon Atlas
 
-Deutsche, mobil optimierte Guide-Web-App für Legends of IdleOn. Ein unabhängiges Fanprojekt für Ubrig.
+Deutsche Guide-App für Legends of IdleOn: Android-APK mit vollständig eingebauten Offline-Daten und zusätzliche Web-Version. Ein unabhängiges Fanprojekt für Ubrig.
 
 **Stand 08.11.2026: spielbare erste App-Version, kein vollständiges oder lückenlos verifiziertes IdleOn-Nachschlagewerk.**
+
+## Android installieren
+
+Unter [Releases](https://github.com/marceldubrig-hash/Idleon-Guide/releases) die Datei **Idleon-Atlas-Android.apk** herunterladen und auf Android öffnen. Falls Android fragt, die Installation für den verwendeten Browser erlauben. Ein ZIP aus GitHub Actions ist dafür nicht nötig.
+
+Die Android-Version verwendet die Atlas-Oberfläche in einer lokalen WebView. Keine Website muss gehostet werden. Bildschirmränder, Zurücknavigation und Backup-Dateiauswahl sind nativ integriert. Die APK enthält alle Daten und Grafiken. Eine aktuelle Android System WebView wird vorausgesetzt.
+
+APK-Build: `npm run build && node scripts/prepare-android.mjs`, danach `gradle -p android assembleRelease` (Gradle 8.11.1, JDK 17, Android SDK 35). Der Workflow **Android APK** baut, prüft im Emulator und veröffentlicht den direkten APK-Download.
+
+[Hinweise zur Vorschau und Signierung](docs/ANDROID_RELEASE.md). Ein dauerhafter Produktionsschlüssel ist noch nicht eingerichtet.
 
 ## Enthalten
 
