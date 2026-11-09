@@ -54,7 +54,12 @@ jobs:
           disable-animations: true
           script: |
             gradle -p android connectedDebugAndroidTest --no-daemon
-            adb pull /sdcard/Android/data/de.ubrig.idleonatlas/files android-screenshots
+            adb install android/app/build/outputs/apk/release/app-release.apk
+            adb shell am start -W -n de.ubrig.idleonatlas/.MainActivity
+            sleep 5
+            adb shell pidof de.ubrig.idleonatlas
+            mkdir -p android-screenshots
+            adb exec-out screencap -p > android-screenshots/android-home.png
       - name: Collect Android reports
         if: always()
         uses: actions/upload-artifact@v6
